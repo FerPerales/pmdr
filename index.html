@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Pmdr : pompom + rescuetime + ifttt">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pmdr</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/FerPerales/pmdr">View on GitHub</a>
+
+          <h1 id="project_title">Pmdr</h1>
+          <h2 id="project_tagline">pompom + rescuetime + ifttt</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/FerPerales/pmdr/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/FerPerales/pmdr/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="pmdr" class="anchor" href="#pmdr" aria-hidden="true"><span class="octicon octicon-link"></span></a>pmdr</h1>
+
+<p>pmdr is an small wrapper for the awesome <a href="https://github.com/knaveofdiamonds/pompom">pompom</a> command-line interface to use pomodoro
+and make it work together with <a href="http://rescuetime.com">rescue time</a> and their cool feature called FocusTime.</p>
+
+<p>This script uses <a href="http://ifttt.com">IFTTT</a> to trigger a custom action via <a href="https://ifttt.com/maker">maker channel</a> which will be listening to two actions: <code>pomodoro_start</code> and <code>pomodoro_end</code></p>
+
+<h2>
+<a id="ifttt-setup" class="anchor" href="#ifttt-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>IFTTT Setup</h2>
+
+<ul>
+<li>Get an <a href="https://ifttt.com/join">IFTTT account</a> if you don't have one yet</li>
+<li>Activate the <a href="https://ifttt.com/maker">maker channel</a>
+</li>
+<li>You will get a token. Take note and replace the <code>$IFTTT_KEY</code> in the <code>pmdr</code> file</li>
+<li>Add these two recipes to your IFTTT account:
+
+<ul>
+<li>
+<a href="https://ifttt.com/recipes/364500-start-a-15-minute-focustime-session">Start a FocusTime session</a>. By default, a 15-minute session will be created, but can be customized.</li>
+<li>
+<a href="https://ifttt.com/recipes/364499-end-current-focustime-session">End current FocusTime session</a>. Ends your current FocusTime session</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="script-setup" class="anchor" href="#script-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Script setup</h2>
+
+<ul>
+<li>To make the script global, do the following:</li>
+</ul>
+
+<pre><code>chmod +x pmdr
+sudo cp pmdr /usr/local/bin/pmdr
+</code></pre>
+
+<h2>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h2>
+
+<p><code>pmdr start</code></p>
+
+<p>Starts a new 25-minute session in pompom and activate a 15-minute FocusTime session in RescueTime</p>
+
+<p><code>pmdr end</code></p>
+
+<p>Ends your current session in pompom and stops the current FocusTime session</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pmdr maintained by <a href="https://github.com/FerPerales">FerPerales</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
