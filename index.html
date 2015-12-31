@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Pmdr : pompom + rescuetime + ifttt">
+    <meta name="description" content="Pmdr : pompom + rescuetime + ifttt = #SoMuchWin">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/FerPerales/pmdr">View on GitHub</a>
 
           <h1 id="project_title">Pmdr</h1>
-          <h2 id="project_tagline">pompom + rescuetime + ifttt</h2>
+          <h2 id="project_tagline">pompom + rescuetime + ifttt = #SoMuchWin</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/FerPerales/pmdr/zipball/master">Download this project as a .zip file</a>
@@ -34,10 +34,21 @@
         <h1>
 <a id="pmdr" class="anchor" href="#pmdr" aria-hidden="true"><span class="octicon octicon-link"></span></a>pmdr</h1>
 
-<p>pmdr is an small wrapper for the awesome <a href="https://github.com/knaveofdiamonds/pompom">pompom</a> command-line interface to use pomodoro
+<p>pmdr is an small wrapper for the awesome <a href="https://github.com/tj/pomo">pomo</a> command-line interface to use pomodoro
 and make it work together with <a href="http://rescuetime.com">rescue time</a> and their cool feature called FocusTime.</p>
 
 <p>This script uses <a href="http://ifttt.com">IFTTT</a> to trigger a custom action via <a href="https://ifttt.com/maker">maker channel</a> which will be listening to two actions: <code>pomodoro_start</code> and <code>pomodoro_end</code></p>
+
+<h2>
+<a id="pomo-setup" class="anchor" href="#pomo-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pomo setup</h2>
+
+<p>Pomo is a Ruby gem so make sure you have <code>Ruby</code> installed.</p>
+
+<p>Install pomo:</p>
+
+<p><code>gem install pomo</code></p>
+
+<p>This should be pretty straightforward but, in case you run into any issue, please refer to <a href="https://github.com/tj/pomo">pomo repo</a> to look for help.</p>
 
 <h2>
 <a id="ifttt-setup" class="anchor" href="#ifttt-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>IFTTT Setup</h2>
@@ -74,11 +85,11 @@ sudo cp pmdr /usr/local/bin/pmdr
 
 <p><code>pmdr start</code></p>
 
-<p>Starts a new 25-minute session in pompom and activate a 15-minute FocusTime session in RescueTime</p>
+<p>Starts a new 25-minute session in pomo and activate a 15-minute FocusTime session in RescueTime</p>
 
 <p><code>pmdr end</code></p>
 
-<p>Ends your current session in pompom and stops the current FocusTime session</p>
+<p>Ends your current session in pomo and stops the current FocusTime session</p>
       </section>
     </div>
 
