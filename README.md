@@ -1,10 +1,20 @@
 # pmdr
 
-pmdr is an small wrapper for the awesome [pompom](https://github.com/knaveofdiamonds/pompom) command-line interface to use pomodoro
+pmdr is an small wrapper for the awesome [pomo](https://github.com/tj/pomo) command-line interface to use pomodoro
 and make it work together with [rescue time](http://rescuetime.com) and their cool feature called FocusTime.
 
 This script uses [IFTTT](http://ifttt.com) to trigger a custom action via [maker channel](https://ifttt.com/maker) which will be listening to two actions: `pomodoro_start` and `pomodoro_end`
 
+
+## Pomo setup
+
+Pomo is a Ruby gem so make sure you have `Ruby` installed.
+
+Install pomo:
+
+`gem install pomo`
+
+This should be pretty straightforward but, in case you run into any issue, please refer to [pomo repo](https://github.com/tj/pomo) to look for help.
 
 ## IFTTT Setup
 
@@ -29,8 +39,8 @@ sudo cp pmdr /usr/local/bin/pmdr
 
 `pmdr start`
 
-Starts a new 25-minute session in pompom and activate a 15-minute FocusTime session in RescueTime
+Starts a new 25-minute session in pomo and activate a 15-minute FocusTime session in RescueTime
 
 `pmdr end`
 
-Ends your current session in pompom and stops the current FocusTime session
+Ends your current session in pomo and stops the current FocusTime session
