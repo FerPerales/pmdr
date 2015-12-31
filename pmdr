@@ -1,0 +1,22 @@
+#!/bin/bash
+export IFTTT_KEY='YOUR_TOKEN_HERE'
+action="$1"
+
+case $action in
+  start)
+          pomo add '' &> /dev/null
+          pomo start &> /dev/null
+          echo 'Pomodoro stared'
+          curl -X POST "https://maker.ifttt.com/trigger/pomodoro_start/with/key/$IFTTT_KEY" &> /dev/null
+          echo 'Focus time on RescueTime started'
+          ;;
+  stop)
+          pomo complete first &> /dev/null
+          echo 'Pomodoro finished'
+          curl -X POST "https://maker.ifttt.com/trigger/pomodoro_end/with/key/$IFTTT_KEY" &> /dev/null
+          echo 'Focus time on RescueTime finished'
+          ;;
+  *)
+          echo "Unknown option $action: Use either start or stop"
+          ;;
+esac
